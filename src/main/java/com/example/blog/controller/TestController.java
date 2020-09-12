@@ -15,12 +15,12 @@ public class TestController {
 	
 	
 	@GetMapping({"", "/"})
-	public @ResponseBody String index() {
+	public String index() {
 		
 		System.out.println(t.age);
-		System.out.println(t.money);
+//		System.out.println(t.money);
 		System.out.println(t.getMoney());
-		return "Hello world";
+		return "test";
 	}
 	
 }
