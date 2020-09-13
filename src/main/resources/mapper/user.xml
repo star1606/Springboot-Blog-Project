@@ -4,13 +4,8 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.blog.repository.UserRepository">
 	
-	<insert id="save">
-		INSERT INTO user(username, password, email, role, createDate) 
-		VALUES(#{username}, #{password}, #{email}, #{role}, now())
-	</insert>
-	
-	<select id="login" resultType="com.example.blog.model.User">
-		SELECT id, username, email, profile, role, createDate FROM user WHERE username = #{username} AND password = #{password}
+	<select id = "findById" resultType = "com.example.blog.User">
+		select * from User where id = #{id}
 	</select>
   
 </mapper>
